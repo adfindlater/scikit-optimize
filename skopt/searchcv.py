@@ -467,7 +467,7 @@ class BayesSearchCV(BaseSearchCV):
                                       dtype=np.int)
 
         _store('test_score', test_scores, splits=True, rank=True,
-               weights=test_sample_counts if self.iid else None)
+               weights=test_sample_counts)
         if self.return_train_score:
             _store('train_score', train_scores, splits=True)
         _store('fit_time', fit_time)
